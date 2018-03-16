@@ -50,7 +50,7 @@ with tf.device('/CPU:0'):
 
     model = Model(base_model.input, x)
     model.load_weights('weights/mobilenet_weights.h5')
-
+    model.save('/data/model/mobilenet_nima.h5')
     score_list = []
 
     for img_path in imgs:
